@@ -1,0 +1,104 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the background and basic layout */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Birthday message style */
+h1 {
+  font-size: 2.5em;
+  color: #ff6347;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Button style */
+button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4500;
+}
+
+/* Balloon animation */
+#balloon {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 80px;
+  background-color: #ff6347;
+  border-radius: 50%;
+  animation: floatBalloon 5s infinite;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatBalloon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-150px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+
+  #balloon {
+    width: 40px;
+    height: 60px;
+  }
+}
